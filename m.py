@@ -590,13 +590,13 @@ def send_welcome(message):
 
     # Create keyboard markup
     markup = ReplyKeyboardMarkup(resize_keyboard=True)
-    my_account_button = KeyboardButton("DONT TAP")
-    attack_button = KeyboardButton("DONT TAP")
+    my_account_button = KeyboardButton("𝐌𝐲 𝐀𝐜𝐜𝐨𝐮𝐧𝐭🏦")
+    attack_button = KeyboardButton("🚀 𝐀𝐭𝐭𝐚𝐜𝐤")
     markup.add(my_account_button, attack_button)
 
     if is_super_admin(user_id):
         welcome_message = (
-            f"Welcome, Super Admin! Developed By  T@RUSTVIP_MOD \n\n"
+            f"Welcome, Super Admin! Developed By  @TRUSTVIP_MOD \n\n"
             f"Admin Commands:\n"
             f"/addadmin - Add new admin\n"
             f"/removeadmin - Remove admin\n"
