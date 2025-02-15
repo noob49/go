@@ -25,7 +25,7 @@ KEY_PRICES = {
     'day': 80,   # 90 Rs per day
     'week': 500  # 500 Rs per week
 }
-ADMIN_IDS = [6366780616, 7403569982]
+ADMIN_IDS = [6366780616]
 BOT_TOKEN = "7740649057:AAFn5oSbrd8_j7DaiXAsJYy57Pw7a_K2Ydk"
 thread_count = 800
 packet_size = 7
@@ -358,12 +358,12 @@ async def run_attack_command_on_codespace(target_ip, target_port, duration, chat
 
         # Send completion message
         bot.send_message(chat_id, 
-            f"𝗔𝘁𝘁𝗮𝗰𝗸 𝗙𝗶𝗻𝗶𝘀𝗵𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 🚀")
+            f"𝗔𝘁𝘁𝗮𝗰𝗸 𝗙𝗶𝗻𝗶𝘀𝗵𝗲𝗱 𝗦𝘂𝗰𝗰𝗲𝘀𝘀𝗳𝘂𝗹𝗹𝘆 🚀 BY REAL BOT OWNER @TRUSTVIP_MOD")
 
     except Exception as e:
         bot.send_message(chat_id, "Failed to execute the attack. Please try again later.")
 
-@bot.message_handler(commands=['Attack'])
+@bot.message_handler(commands=['bgmi'])
 def attack_command(message):
     user_id = message.from_user.id
     chat_id = message.chat.id
@@ -371,8 +371,8 @@ def attack_command(message):
     # Check cooldown first, regardless of admin status
     in_cooldown, remaining = check_cooldown(user_id)
     if in_cooldown:
-        minutes = remaining // 60
-        seconds = remaining % 60
+        minutes = remaining // 110
+        seconds = remaining % 110
         bot.send_message(
             chat_id,
             f"*⏰ Cooldown in progress! Please wait {minutes}m {de}s before starting another attack.*",
@@ -395,7 +395,7 @@ def attack_command(message):
     found_user = next((user for user in users if user['user_id'] == user_id), None)
 
     if not found_user:
-        bot.send_message(chat_id, "*You are not registered. Please redeem a key.\nContact For New Key:- ᚛ TRUSTVIP_MOD᚜*", parse_mode='Markdown')
+        bot.send_message(chat_id, "*You are not registered. Please redeem a key.\nContact For New Key:- ᚛ @TRUSTVIP_MOD ᚜*", parse_mode='Markdown')
         return
 
     try:
@@ -411,8 +411,8 @@ def process_attack_command(message, chat_id):
         # Double-check cooldown when processing the attack
         in_cooldown, remaining = check_cooldown(user_id)
         if in_cooldown:
-            minutes = remaining // 60
-            seconds = remaining % 60
+            minutes = remaining // 110
+            seconds = remaining % 110
             bot.send_message(
                 chat_id,
                 f"*⏰ Cooldown in progress! Please wait {minutes}m {seconds}s before starting another attack.*",
@@ -461,7 +461,7 @@ def process_attack_command(message, chat_id):
 
 @bot.message_handler(commands=['owner'])
 def send_owner_info(message):
-    owner_message = "This Bot Has Been Developed By ᚛ TRUSTVIP_MOD᚜"  
+    owner_message = "This Bot Has Been Developed By @TRUSTVIP_MOD "  
     bot.send_message(message.chat.id, owner_message)
 
 @bot.message_handler(commands=['addadmin'])
@@ -596,7 +596,7 @@ def send_welcome(message):
 
     if is_super_admin(user_id):
         welcome_message = (
-            f"Welcome, Super Admin! Developed By ᚛ TRUSTVIP_MOD᚜\n\n"
+            f"Welcome, Super Admin! Developed By  T@RUSTVIP_MOD \n\n"
             f"Admin Commands:\n"
             f"/addadmin - Add new admin\n"
             f"/removeadmin - Remove admin\n"
@@ -609,7 +609,7 @@ def send_welcome(message):
     elif is_admin(user_id):
         balance = get_admin_balance(user_id)
         welcome_message = (
-            f"Welcome, Admin! Developed By ᚛ TRUSTVIP_MOD᚜\n\n"
+            f"Welcome, Admin! Developed By  @TRUSTVIP_MOD ᚜\n\n"
             f"Your Balance: {balance}\n\n"
             f"Admin Commands:\n"
             f"/genkey - Generate new key\n"
@@ -618,12 +618,12 @@ def send_welcome(message):
         )
     else:
         welcome_message = (
-            f"Welcome, {username}! Developed By ᚛ TRUSTVIP_MOD᚜\n\n"
+            f"Welcome, {username}! Developed By  @TRUSTVIP_MOD\n\n"
             f"Please redeem a key to access bot functionalities.\n"
             f"Available Commands:\n"
             f"/redeem - To redeem key\n"
-            f"/Attack - Start an attack\n\n"
-            f"Contact ᚛ TRUSTVIP_MOD᚜ for new keys"
+            f"/bgmi - Start an attack\n\n"
+            f"*Contact  @TRUSTVIP_MOD for new keys*"
         )
 
     bot.send_message(message.chat.id, welcome_message, reply_markup=markup)
@@ -634,7 +634,7 @@ def genkey_command(message):
     chat_id = message.chat.id
 
     if not is_admin(user_id):
-        bot.send_message(chat_id, "*You are not authorized to generate keys.\nContact Owner: ᚛ TRUSTVIP_MOD᚜*", parse_mode='Markdown')
+        bot.send_message(chat_id, "*You are not authorized to generate keys.\nContact Owner: ᚛ #TRUSTVIP_MOD ᚜*", parse_mode='Markdown')
         return
 
     cmd_parts = message.text.split()
@@ -767,7 +767,7 @@ def remove_user_command(message):
     chat_id = message.chat.id
 
     if not is_admin(user_id):
-        bot.send_message(chat_id, "*You are not authorized to remove users.\nContact Owner:- ᚛ TRUSTVIP_MOD᚜*", parse_mode='Markdown')
+        bot.send_message(chat_id, "*You are not authorized to remove users.\nContact Owner:- @TRUSTVIP_MOD *", parse_mode='Markdown')
         return
 
     cmd_parts = message.text.split()
@@ -832,12 +832,12 @@ def attack_button_handler(message):
     found_user = next((user for user in users if user['user_id'] == user_id), None)
 
     if not found_user:
-        bot.send_message(chat_id, "*𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫𝐞𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐝𝐞𝐞𝐦 𝐀 𝐤𝐞𝐲 𝐓𝐨 𝐎𝐰𝐧𝐞𝐫:- ᚛ TRUSTVIP_MOD᚜*", parse_mode='Markdown')
+        bot.send_message(chat_id, "*𝐘𝐨𝐮 𝐚𝐫𝐞 𝐧𝐨𝐭 𝐫𝐞𝐠𝐢𝐬𝐭𝐞𝐫𝐞𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐝𝐞𝐞𝐦 𝐀 𝐤𝐞𝐲 𝐓𝐨 𝐎𝐰𝐧𝐞𝐫:-  @TRUSTVIP_MOD .*", parse_mode='Markdown')
         return
 
     valid_until = datetime.fromisoformat(found_user['valid_until'])
     if datetime.now() > valid_until:
-        bot.send_message(chat_id, "*𝐘𝐨𝐮𝐫 𝐤𝐞𝐲 𝐡𝐚𝐬 𝐞𝐱𝐩𝐢𝐫𝐞𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐝𝐞𝐞𝐦 𝐀 𝐤𝐞𝐲 𝐓𝐨 𝐎𝐰𝐧𝐞𝐫:- ᚛ TRUSTVIP_MOD᚜.*", parse_mode='Markdown')
+        bot.send_message(chat_id, "*𝐘𝐨𝐮𝐫 𝐤𝐞𝐲 𝐡𝐚𝐬 𝐞𝐱𝐩𝐢𝐫𝐞𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐝𝐞𝐞𝐦 𝐀 𝐤𝐞𝐲 𝐓𝐨 𝐎𝐰𝐧𝐞𝐫:-  @TRUSTVIP_MOD .*", parse_mode='Markdown')
         return
 
     try:
@@ -889,7 +889,7 @@ def my_account(message):
         if datetime.now() > datetime.fromisoformat(found_user['valid_until']):
             account_info = (
                 "𝐘𝐨𝐮𝐫 𝐤𝐞𝐲 𝐡𝐚𝐬 𝐞𝐱𝐩𝐢𝐫𝐞𝐝. 𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐝𝐞𝐞𝐦 𝐚 𝐧𝐞𝐰 𝐤𝐞𝐲.\n"
-                "Contact ᚛ TRUSTVIP_MOD᚜ for assistance."
+                "Contact  @TRUSTVIP_MOD for assistance."
             )
         else:
             account_info = (
@@ -900,7 +900,7 @@ def my_account(message):
                 f"ᴄᴜʀʀᴇɴᴛ ᴛɪᴍᴇ: {current_time}"
             )
     else:
-        account_info = "𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐝𝐞𝐞𝐦 𝐀 𝐤𝐞𝐲 𝐓𝐨 𝐎𝐰𝐧𝐞𝐫:- ᚛ TRUSTVIP_MOD᚜."
+        account_info = "𝐏𝐥𝐞𝐚𝐬𝐞 𝐫𝐞𝐝𝐞𝐞𝐦 𝐀 𝐤𝐞𝐲 𝐓𝐨 𝐎𝐰𝐧𝐞𝐫:-  @TRUSTVIP_MOD."
 
     bot.send_message(message.chat.id, account_info)
 
