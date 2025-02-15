@@ -21,11 +21,11 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 KEY_PRICES = {
-    'hour': 10,  # 10 Rs per hour
-    'day': 80,   # 80 Rs per day
+    'hour': 10,  # 20 Rs per hour
+    'day': 80,   # 90 Rs per day
     'week': 500  # 500 Rs per week
 }
-ADMIN_IDS = [6366780616, 6366780616]
+ADMIN_IDS = [6366780616, 7403569982]
 BOT_TOKEN = "7740649057:AAFn5oSbrd8_j7DaiXAsJYy57Pw7a_K2Ydk"
 thread_count = 800
 packet_size = 7
