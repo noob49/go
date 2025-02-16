@@ -596,8 +596,8 @@ def send_welcome(message):
 
     if is_super_admin(user_id):
         welcome_message = (
-            f"Welcome, Super Admin! Developed By  @TRUSTVIP_MOD \n\n"
-            f"Admin Commands:\n"
+            f"𝙒𝙀𝙇𝘾𝙊𝙈𝙀🤫, Super Admin! 𝘿𝙀𝙑𝙇𝙊𝙋𝙀𝘿 𝘽𝙔 @TRUSTVIP_MOD \n\n"
+            f"Admin  𝘾𝙊𝙈𝙈𝘼𝙉𝘿\n"
             f"/addadmin - Add new admin\n"
             f"/removeadmin - Remove admin\n"
             f"/genkey - Generate new key\n"
@@ -609,21 +609,21 @@ def send_welcome(message):
     elif is_admin(user_id):
         balance = get_admin_balance(user_id)
         welcome_message = (
-            f"Welcome, Admin! Developed By  @TRUSTVIP_MOD ᚜\n\n"
+            f"𝙒𝙀𝙇𝘾𝙊𝙈𝙀🤫 Admin! 𝘿𝙀𝙑𝙇𝙊𝙋𝙀𝘿 𝘽𝙔 @TRUSTVIP_MOD \n\n"
             f"Your Balance: {balance}\n\n"
-            f"Admin Commands:\n"
+            f"𝙏𝙃𝙀𝙎𝙀 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙏𝙊 : ADMIN\n"
             f"/genkey - Generate new key\n"
             f"/remove - Remove user\n"
             f"/balance - Check your balance"
         )
     else:
         welcome_message = (
-            f"Welcome, {username}! Developed By  @TRUSTVIP_MOD\n\n"
-            f"Please redeem a key to access bot functionalities.\n"
-            f"Available Commands:\n"
-            f"/redeem - To redeem key\n"
-            f"/bgmi - Start an attack\n\n"
-            f"*Contact  @TRUSTVIP_MOD for new keys*"
+            f"𝙒𝙀𝙇𝘾𝙊𝙈𝙀🤫, {username}! 𝘿𝙀𝙑𝙇𝙊𝙋𝙀𝘿 𝘽𝙔 @TRUSTVIP_MOD\n\n"
+            f" ᴛʜɪs ɪs ʜɪɢʜ ǫᴜᴀʟɪᴛʏ sᴇʀᴠᴇʀ ʙᴀsᴇᴅ ᴅᴅᴏs. ᴛᴏ ɢᴇᴛ ᴀᴄᴄᴇss.\n"
+            f"𝙐𝙎𝙀 𝙏𝙃𝙀𝙎𝙀 𝘾𝙊𝙈𝙈𝘼𝙉𝘿 𝙏𝙊 𝙍𝙐𝙉\n"
+            f"☠️ /bgmi : Method For Bgmi Servers. \n"
+            f"☠️ /redeem:- To redeem your key\n\n"
+            f"⚡️𝙉𝙀𝙀𝘿 𝙆𝙀𝙔 𝘾𝙉𝙏𝘼𝘾𝙏 @TRUSTVIP_MOD"
         )
 
     bot.send_message(message.chat.id, welcome_message, reply_markup=markup)
@@ -905,7 +905,7 @@ def my_account(message):
     bot.send_message(message.chat.id, account_info)
 
 if __name__ == '__main__':
-    print("Bot is running...")
+    print("Bot is running 𝙒𝙀𝙇𝘾𝙊𝙈𝙀🤫 trust...")
     loop = asyncio.new_event_loop()
     asyncio.set_event_loop(loop)
     
